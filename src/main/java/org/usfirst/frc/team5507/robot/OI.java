@@ -4,8 +4,8 @@ import org.usfirst.frc.team5507.robot.commands.AdjustFieldOrientedAngleCommand;
 import org.usfirst.frc.team5507.robot.commands.AutoAlign;
 import org.usfirst.frc.team5507.robot.commands.CargoIn;
 import org.usfirst.frc.team5507.robot.commands.CargoOut;
-import org.usfirst.frc.team5507.robot.commands.ClimberArm1;
-import org.usfirst.frc.team5507.robot.commands.ClimberArm2;
+//import org.usfirst.frc.team5507.robot.commands.ClimberArm1;
+//import org.usfirst.frc.team5507.robot.commands.ClimberArm2;
 import org.usfirst.frc.team5507.robot.commands.ClimberMoveHand;
 import org.usfirst.frc.team5507.robot.commands.ClimberStop;
 import org.usfirst.frc.team5507.robot.commands.HatchIn;
@@ -21,7 +21,7 @@ import org.usfirst.frc.team5507.robot.commands.ZeroNavX;
 import org.usfirst.frc.team5507.robot.input.DPadButton;
 import org.usfirst.frc.team5507.robot.input.IGamepad;
 import org.usfirst.frc.team5507.robot.input.XboxGamepad;
-import org.usfirst.frc.team5507.robot.subsystems.HolonomicDrivetrain;
+// import org.usfirst.frc.team5507.robot.subsystems.HolonomicDrivetrain;
 
 import edu.wpi.first.wpilibj.XboxController;
 

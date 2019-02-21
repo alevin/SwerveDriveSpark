@@ -6,12 +6,12 @@ branches:
   only:
     - master
 
-addons:
-  sonarcloud:
-    organization: "alevin-github"
-
-script:
-  - sonar-scanner
+#addons:
+#  sonarcloud:
+#    organization: "alevin-github"
+#
+#script:
+#  - sonar-scanner
 
 cache:
   directories:

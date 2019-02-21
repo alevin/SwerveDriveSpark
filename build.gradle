@@ -60,3 +60,12 @@ jar {
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     manifest edu.wpi.first.gradlerio.GradleRIOPlugin.javaManifest(ROBOT_MAIN_CLASS)
 }
+
+apply plugin: 'checkstyle'
+checkstyle {
+    toolVersion '8.17'
+    configFile file("config/checkstyle/google_checks.xml")
+}
+checkstyleMain {
+    source ='src/main/java'
+}

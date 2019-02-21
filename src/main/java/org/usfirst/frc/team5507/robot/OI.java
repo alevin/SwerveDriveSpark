@@ -13,6 +13,7 @@ import org.usfirst.frc.team5507.robot.commands.ResetHappy;
 import org.usfirst.frc.team5507.robot.commands.SetFieldOriented;
 import org.usfirst.frc.team5507.robot.commands.StopArm1;
 import org.usfirst.frc.team5507.robot.commands.StopArm2;
+import org.usfirst.frc.team5507.robot.commands.SwitchLedModes;
 import org.usfirst.frc.team5507.robot.commands.ToggleCamera;
 import org.usfirst.frc.team5507.robot.commands.ToggleFieldOrientedCommand;
 import org.usfirst.frc.team5507.robot.commands.ZeroNavX;

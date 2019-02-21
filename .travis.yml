@@ -6,12 +6,19 @@ branches:
   only:
     - master
 
-#addons:
-#  sonarcloud:
-#    organization: "alevin-github"
-#
-#script:
-#  - sonar-scanner
+addons:
+  sonarcloud:
+    organization: "alevin-github"
+
+script:
+  - ./gradlew sonarqube
+
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'
+    - '$HOME/.gradle'
+    - '.gradle'
 
 cache:
   directories:

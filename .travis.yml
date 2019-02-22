@@ -12,10 +12,9 @@ addons:
     organization: "alevin-github"
 
 script:
-  - git fetch --unshallow
   - ./gradlew clean assemble --stacktrace
   - ./gradlew sonarqube
-# - ./gradlew checkstyle lint --stacktrace  
+# - ./gradlew checkstyleMain build --stacktrace
   
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock

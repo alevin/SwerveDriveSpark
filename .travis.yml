@@ -1,30 +1,23 @@
-language: java
-
-jdk:
- - openjdk11
- 
+---
+addons:
+  sonarcloud:
+    organization: alevin-github
+before_cache:
+  - 'rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock'
+  - 'rm -rf $HOME/.gradle/caches/*/plugin-resolution/'
 branches:
   only:
     - master
-
-addons:
-  sonarcloud:
-    organization: "alevin-github"
-
-script:
-   - ./gradlew clean assemble --stacktrace
-#  - ./gradlew sonarqube
-#  - ./gradlew checkstyleMain build --stacktrace
-   - ./gradlew sonarqube -Dsonar.projectKey=alevin_SwerveDriveSpark -Dsonar.organization=alevin-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
-
-before_cache:
-   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-   - rm -rf $HOME/.gradle/caches/*/plugin-resolution/
-
 cache:
-   directories:
-    - "$HOME/.sonar/cache/"  
-    - '$HOME/.m2/repository'
-    - "$HOME/.gradle/caches/"
-    - "$HOME/.gradle/wrapper/"
-    - '.gradle'
+  directories:
+    - $HOME/.sonar/cache/
+    - $HOME/.m2/repository
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+    - .gradle
+jdk:
+  - openjdk11
+language: java
+script:
+  - './gradlew clean assemble --stacktrace'
+  - './gradlew sonarqube -Dsonar.projectKey=alevin_SwerveDriveSpark -Dsonar.organization=alevin-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN'

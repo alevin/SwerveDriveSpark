@@ -1,4 +1,5 @@
 language: java
+
 jdk:
  - openjdk11
  
@@ -11,15 +12,19 @@ addons:
     organization: "alevin-github"
 
 script:
+  - git fetch --unshallow
+  - ./gradlew clean assemble --stacktrace
   - ./gradlew sonarqube
+# - ./gradlew checkstyle lint --stacktrace  
+  
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -rf $HOME/.gradle/caches/*/plugin-resolution/
 
 cache:
-  directories:
+   directories:
+    - "$HOME/.sonar/cache/"  
     - '$HOME/.m2/repository'
-    - '$HOME/.sonar/cache'
-    - '$HOME/.gradle'
+    - "$HOME/.gradle/caches/"
+    - "$HOME/.gradle/wrapper/"
     - '.gradle'
-
-cache:
-  directories:
-    - '$HOME/.sonar/cache'

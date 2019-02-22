@@ -13,9 +13,10 @@ addons:
 
 script:
   - ./gradlew clean assemble --stacktrace
-  - ./gradlew sonarqube
-# - ./gradlew checkstyleMain build --stacktrace
-  
+#  - ./gradlew sonarqube
+#  - ./gradlew checkstyleMain build --stacktrace
+   - ./gradlew sonarqube -Dsonar.projectKey=alevin_SwerveDriveSpark -Dsonar.organization=alevin-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -rf $HOME/.gradle/caches/*/plugin-resolution/

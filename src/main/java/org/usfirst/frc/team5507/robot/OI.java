@@ -21,10 +21,6 @@ import org.usfirst.frc.team5507.robot.input.DPadButton;
 import org.usfirst.frc.team5507.robot.input.IGamepad;
 import org.usfirst.frc.team5507.robot.input.XboxGamepad;
 
-/**
- * This class is the glue that binds the controls on the physical operator
- * interface to the commands and command groups that allow control of the robot.
- */
 public class OI {
 	private IGamepad mController = new XboxGamepad(0);
 	private IGamepad climbController = new XboxGamepad(1);
@@ -36,7 +32,6 @@ public class OI {
 	}
 
 	public void registerControls() { 
-		//mController.getAButton().whenPressed(new ResetDrivetrainEncoderCommand(mRobot.getDrivetrain()));
 		//main controls
 		mController.getAButton().whileHeld(new CargoOut());
 		mController.getAButton().whenReleased(new CargoIn());

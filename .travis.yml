@@ -21,3 +21,4 @@ language: java
 script:
   - 'sh ./gradlew clean assemble --stacktrace'
   - './gradlew sonarqube -Dsonar.projectKey=alevin_SwerveDriveSpark -Dsonar.organization=alevin-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN'
+

@@ -18,7 +18,9 @@ cache:
 jdk:
   - openjdk11
 language: java
+before_install:
+  - chmod +x gradlew 
 script:
-  - 'sh ./gradlew clean assemble --stacktrace'
+  - './gradlew clean assemble --stacktrace'
   - './gradlew sonarqube -Dsonar.projectKey=alevin_SwerveDriveSpark -Dsonar.organization=alevin-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN'
 

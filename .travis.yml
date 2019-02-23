@@ -19,5 +19,5 @@ jdk:
   - openjdk11
 language: java
 script:
-  - './gradlew clean assemble --stacktrace'
+  - 'sh ./gradlew clean assemble --stacktrace'
   - './gradlew sonarqube -Dsonar.projectKey=alevin_SwerveDriveSpark -Dsonar.organization=alevin-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN'
